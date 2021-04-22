@@ -30,7 +30,7 @@ public class StringUtilsTest {
     public void testStringUtilsReverse() {
         StringUtils build =  new StringUtils().toBuilder()
                 .build();
-        Assert.assertEquals(build.reverse("мама мыла раму"), "раму мыла мама");
+        Assert.assertEquals("раму мыла мама", build.reverse("мама мыла раму"));
     }
 }
 

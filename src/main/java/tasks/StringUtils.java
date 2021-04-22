@@ -21,15 +21,14 @@ public class StringUtils {
     @Builder.Default
     String delimiter = " ";
 
+    /**
+     // Написать функцию String reverse(String s), возвращающую строку s с обратным порядком слов
+     // Например: мама мыла раму -> раму мыла мама
+     */
     public String reverse(String s) {
         Stream<String> stream = Stream.of(s);
         List<String> list =  stream
                 .flatMap(value -> {
-                    /*
-                    String[] split = value.split(delimiter);
-                    Arrays.sort(split,Collections.reverseOrder());//lexicographic order
-                return Arrays.asList(split).stream();
-                    */
                     List<String> split = Arrays.asList(value.split(delimiter));
                     Collections.reverse(split);
                 return split.stream();
@@ -39,7 +38,7 @@ public class StringUtils {
     }
 
     /**
-     // Написать функцию boolean isPalindrome(String str), проверяющую является ли строка str палиндромом
+     // Написать функцию boolean isPalindrome(String s), проверяющую является ли строка s палиндромом
      // (без учета регистра и небуквенных символов).
      // Например: abcba -> true
      // abdc -> false
