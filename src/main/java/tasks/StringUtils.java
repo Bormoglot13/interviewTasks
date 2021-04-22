@@ -73,7 +73,7 @@ public class StringUtils {
 
     public static void main(String[] args) {
         StringUtils build = new StringUtils().toBuilder().build();
-        log.info(build.reverse("мама мыла раму и сосала хуй"));
+        log.info(build.reverse("мама мыла раму и снимала паутину"));
         log.info(String.valueOf(build.isPalindrome("Аргентина манит негра")));
         log.info(String.valueOf(build.isPalindrome2("Аргентина манит негра")));
     }
